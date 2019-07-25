@@ -1,0 +1,68 @@
+Configure miss: lint
+Configure miss: exctags
+Configure miss: exetags
+Configure miss: if you want to check memory-leaks
+Configure miss: if you want to enable debug-code
+Configure miss: if you want verbose trace code
+Configure miss: if you want to turn on gcc warnings
+Configure miss: if you want to use dbmalloc for testing
+Configure miss: if you want to use dmalloc for testing
+Configure miss: _LARGE_FILES value needed for large files
+Configure miss: whether to use struct dirent64
+Configure miss: if the declaration of iconv() needs const.
+Configure miss: if you want NSS compatible SSL libraries
+Configure miss: if you want gnutls support
+Configure miss: if you want gnutls-openssl compat
+Configure miss: if you want socks library
+Configure miss: if you want socks5 library
+Configure miss: IPv6 library if required
+Configure miss: specific curses-directory
+Configure miss: if you want the wide-curses features
+Configure miss: if htmlized lynx.cfg should be built
+Configure miss: if local doc directory should be linked to help page
+Configure miss: if you want only a few charsets
+Configure miss: opendir in -ldir
+Configure miss: union wait
+Configure miss: broken/missing definition of remove
+Configure miss: if external errno exists
+Configure miss: if utmp.ut_syslen is declared
+Configure miss: if external h_errno exists
+Configure miss: if experimental CJK logic should be used
+Configure miss: if experimental Japanese UTF-8 logic should be used
+Configure miss: if you want to use default-colors
+Configure miss: if experimental keyboard-layout logic should be used
+Configure miss: if experimental nested-table logic should be used
+Configure miss: if charset-selection logic should be used
+Configure miss: if you want to use external commands
+Configure miss: if you want to use setfont support
+Configure miss: if you want cgi-link support
+Configure miss: if you want change-exec support
+Configure miss: if you want exec-links support
+Configure miss: if you want exec-scripts support
+Configure miss: if you want internal-links feature
+Configure miss: if you want to fork NSL requests
+Configure miss: if you want to log URL requests via syslog
+Configure miss: if you want to underline links
+Configure miss: if help files should be gzip'ed
+Configure miss: if you want to use libbz2 for decompression of some bzip2 files
+Configure miss: if you want to use zlib for decompression of some gzip files
+Configure miss: if you want to exclude FINGER code
+Configure miss: if you want to exclude GOPHER code
+Configure miss: if you want to exclude NEWS code
+Configure miss: if you want to exclude FTP code
+Configure miss: if you want to include WAIS code
+Configure miss: telnet
+Configure miss: telnet
+Configure miss: tn3270
+Configure miss: tn3270
+Configure miss: rlogin
+Configure miss: rlogin
+Configure miss: compress
+Configure miss: compress
+Configure miss: uudecode
+Configure miss: uudecode
+Configure miss: ncurses/term.h
+Configure miss: obsolete/broken version of ncurses
+Configure miss: whether termios.h needs _POSIX_SOURCE
+Configure miss: definition to turn on extended curses functions
+Configure miss: if rpath-hack should be disabled

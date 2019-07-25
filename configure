@@ -1,0 +1,5 @@
+--with-ssl=/usr
+--enable-nls
+--enable-ipv6
+--mandir=/usr/share/man
+--with-screen=ncurses
