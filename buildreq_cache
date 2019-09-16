@@ -4,3 +4,4 @@ cppcheck
 ctags
 glibc-bin
 ncurses-dev
+openssl-dev

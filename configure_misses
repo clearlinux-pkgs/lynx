@@ -1,6 +1,7 @@
 Configure miss: lint
 Configure miss: exctags
 Configure miss: exetags
+Configure miss: windres
 Configure miss: if you want to check memory-leaks
 Configure miss: if you want to enable debug-code
 Configure miss: if you want verbose trace code

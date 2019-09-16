@@ -1,0 +1,3 @@
+install -m 0755 -d %{buildroot}/usr/share/defaults/lynx/
+install -m 0644 lynx.cfg %{buildroot}/usr/share/defaults/lynx/lynx.cfg
+install -m 0644 samples/lynx.lss %{buildroot}/usr/share/defaults/lynx/lynx.lss
