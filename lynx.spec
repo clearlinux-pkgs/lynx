@@ -6,13 +6,13 @@
 #
 Name     : lynx
 Version  : 1
-Release  : 4
+Release  : 5
 URL      : https://invisible-mirror.net/archives/lynx/tarballs/lynx2.8.9rel.1.tar.gz
 Source0  : https://invisible-mirror.net/archives/lynx/tarballs/lynx2.8.9rel.1.tar.gz
-Source1 : https://invisible-mirror.net/archives/lynx/tarballs/lynx2.8.9rel.1.tar.gz.asc
+Source1  : https://invisible-mirror.net/archives/lynx/tarballs/lynx2.8.9rel.1.tar.gz.asc
 Summary  : A text-based Web browser
 Group    : Development/Tools
-License  : GPL-2.0 LGPL-2.0
+License  : GPL-2.0 LGPL-2.0 MIT
 Requires: lynx-bin = %{version}-%{release}
 Requires: lynx-data = %{version}-%{release}
 Requires: lynx-license = %{version}-%{release}
@@ -77,6 +77,7 @@ man components for the lynx package.
 
 %prep
 %setup -q -n lynx2.8.9rel.1
+cd %{_builddir}/lynx2.8.9rel.1
 %patch1 -p1
 
 %build
@@ -84,28 +85,29 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1568756778
+export SOURCE_DATE_EPOCH=1604365547
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
 export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %configure --disable-static --with-ssl=/usr \
 --enable-nls \
 --enable-ipv6 \
 --mandir=/usr/share/man \
 --with-screen=ncurses
-make  %{?_smp_mflags} LIBS="-lncursesw -lssl -lcrypto"
+make  %{?_smp_mflags}  LIBS="-lncursesw -lssl -lcrypto"
 
 %install
-export SOURCE_DATE_EPOCH=1568756778
+export SOURCE_DATE_EPOCH=1604365547
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/lynx
-cp COPYING %{buildroot}/usr/share/package-licenses/lynx/COPYING
-cp WWW/Library/vms/COPYING.LIB %{buildroot}/usr/share/package-licenses/lynx/WWW_Library_vms_COPYING.LIB
+cp %{_builddir}/lynx2.8.9rel.1/COPYING %{buildroot}/usr/share/package-licenses/lynx/4040d546c58c33203dd42955add5c460400c4010
+cp %{_builddir}/lynx2.8.9rel.1/PACKAGE/debian/copyright %{buildroot}/usr/share/package-licenses/lynx/e21be8436fdd89b040da444fe004d0a0b7c4b4dc
+cp %{_builddir}/lynx2.8.9rel.1/WWW/Library/vms/COPYING.LIB %{buildroot}/usr/share/package-licenses/lynx/ba8966e2473a9969bdcab3dc82274c817cfd98a1
 %make_install
 %find_lang lynx
 ## install_append content
@@ -128,8 +130,9 @@ install -m 0644 samples/lynx.lss %{buildroot}/usr/share/defaults/lynx/lynx.lss
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/lynx/COPYING
-/usr/share/package-licenses/lynx/WWW_Library_vms_COPYING.LIB
+/usr/share/package-licenses/lynx/4040d546c58c33203dd42955add5c460400c4010
+/usr/share/package-licenses/lynx/ba8966e2473a9969bdcab3dc82274c817cfd98a1
+/usr/share/package-licenses/lynx/e21be8436fdd89b040da444fe004d0a0b7c4b4dc
 
 %files man
 %defattr(0644,root,root,0755)
