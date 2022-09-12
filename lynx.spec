@@ -6,7 +6,7 @@
 #
 Name     : lynx
 Version  : 1
-Release  : 5
+Release  : 6
 URL      : https://invisible-mirror.net/archives/lynx/tarballs/lynx2.8.9rel.1.tar.gz
 Source0  : https://invisible-mirror.net/archives/lynx/tarballs/lynx2.8.9rel.1.tar.gz
 Source1  : https://invisible-mirror.net/archives/lynx/tarballs/lynx2.8.9rel.1.tar.gz.asc
