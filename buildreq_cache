@@ -1,7 +1,6 @@
-1
+2.8.9rel.1
 bison
 cppcheck
 ctags
-glibc-bin
-ncurses-dev
 openssl-dev
+pkgconfig(ncurses)
